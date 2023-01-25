@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.owner {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+}
+
+.owner p,
+.imageOwner {
+  align-self: flex-end;
+  background-color: #bcead5;
+  border-radius: 12px;
+  border-bottom-right-radius: 0px;
+}

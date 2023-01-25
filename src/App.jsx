@@ -7,7 +7,7 @@ import Register from "./Pages/Register";
 function App() {
   return (
     <div>
-      <Home />
+      <Login />
     </div>
   );
 }

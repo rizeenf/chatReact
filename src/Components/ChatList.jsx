@@ -2,7 +2,7 @@ import React from "react";
 
 const ChatList = () => {
   return (
-    <div className=" scroll-smooth">
+    <div className="  ">
       <div className="flex flex-row items-center gap-2 p-2">
         <img
           src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60"

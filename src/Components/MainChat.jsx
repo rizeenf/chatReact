@@ -5,7 +5,7 @@ import Messages from "./Messages";
 
 const MainChat = () => {
   return (
-    <div className=" w-2/3">
+    <div className=" w-2/3 flex flex-col justify-between">
       <ChatInfo />
       <Messages />
       <ChatInput />

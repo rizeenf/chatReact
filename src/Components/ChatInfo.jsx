@@ -15,9 +15,21 @@ const ChatInfo = () => {
         <span className=" font-semibold text-md text-text">Rizee kun</span>
       </div>
       <div className=" flex flex-row items-center">
-        <img src={Add} alt="Add Contacts" className=" w-8 h-8" />
-        <img src={Cam} alt="Video call" className=" w-8 h-8" />
-        <img src={More} alt="More Info" className=" w-8 h-8" />
+        <img
+          src={Add}
+          alt="Add Contacts"
+          className=" w-8 h-8 cursor-pointer hover:bg-cream"
+        />
+        <img
+          src={Cam}
+          alt="Video call"
+          className=" w-8 h-8 cursor-pointer hover:bg-cream"
+        />
+        <img
+          src={More}
+          alt="More Info"
+          className=" w-8 h-8 cursor-pointer hover:bg-cream"
+        />
       </div>
     </div>
   );

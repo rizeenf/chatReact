@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import addImage from "../assets/img/addImage.png";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
 
 const RegisterForm = () => {
+  const [err, setErr] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const username = e.target[0].value;
+    const email = e.target[1].value;
+    const password = e.target[2].value;
+    const image = e.target[3].files[0];
+
+    try {
+      const res = await createUserWithEmailAndPassword(auth, email, password);
+      console.log(res);
+    } catch (err) {
+      setErr(true);
+    }
+  };
+
   return (
     <div className="bg-primary w-screen h-screen flex justify-center items-center">
       <div className="flex flex-col justify-center items-center gap-4 bg-white rounded-xl py-8 px-20">
@@ -9,7 +29,10 @@ const RegisterForm = () => {
         <span className="text-xl font-semibold text-creamDarker pb-5">
           Register
         </span>
-        <form className="flex flex-col gap-4 justify-center items-center w-full">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-4 justify-center items-center w-full"
+        >
           <input
             type="text"
             placeholder="Username"
@@ -34,10 +57,14 @@ const RegisterForm = () => {
             <span className="text-sm"> Choose an Profile picture</span>
           </label>
 
-          <button className=" bg-primary w-1/3 text-text rounded p-2">
+          <button
+            name="submit"
+            className=" bg-primary w-1/3 text-text rounded p-2"
+          >
             Sign up
           </button>
         </form>
+        {err && <span>Something wrong</span>}
         <span className="text-text text-sm mt-2">
           You do have an account? Login
         </span>
