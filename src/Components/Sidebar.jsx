@@ -5,7 +5,7 @@ import SideNavbar from "./SideNavbar";
 
 const Sidebar = () => {
   return (
-    <div className=" w-1/3 border-r-2 border-white bg-creamDark">
+    <div className=" w-1/3 border-r-2 border-white bg-cream ">
       <SideNavbar />
       <SearchBar />
       <ChatList />
